@@ -9,7 +9,7 @@ data = json.loads(source)
 
 new_user_id = 11
 new_todo_id = len(data) + 1
-new_title = "Stuffs"
+new_title = "New Title"
 completed = False
 new_todo = {"userId": new_user_id, "id": new_todo_id, "title": new_title, "completed": completed}
 data.append(new_todo)
