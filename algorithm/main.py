@@ -15,11 +15,18 @@ def permutation(string, start, stop):
             listy[str_index] = current_char
 
 
+
 def main():
-    string = "hat"
-    length = len(string)
-    permutation(string, 0, length)
-    to_be_sorted = ", ".join(result)
-    print(sorted(result))
+    entry_list = open("strings.txt", "r")
+    if entry_list.mode == "r":
+        contents = entry_list.read()
+        content_list = contents.split()
+        for word in content_list:
+            string = word
+            length = len(string)
+            permutation(string, 0, length)
+            result_sorted = sorted(result)
+            result.clear()
+            print(",".join(result_sorted))
 if __name__ == "__main__":
     main()
